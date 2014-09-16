@@ -27,5 +27,5 @@ Set your ``STATIC_ROOT``. E.g.:
 Usage
 -----
 
-You file at ``http://example.com/static/css/global.css`` will
+The URL ``http://example.com/static/css/global.css`` should
 successfully link to ``./static/css/global.css``.
