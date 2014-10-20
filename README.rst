@@ -10,7 +10,7 @@ Setup
 
     # settings.py
 
-    STATICFILES_FINDERS = ['template_extensions.finders.RootFileFinder']
+    STATICFILES_FINDERS = ['django_static_root_finder.finders.StaticRootFinder']
 
 Definition
 ----------
