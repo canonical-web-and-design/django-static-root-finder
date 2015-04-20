@@ -27,3 +27,7 @@ class StaticRootFinder(BaseFinder):
 
         if path.isfile(static_root_file_path):
             return static_root_file_path
+
+    def list(self, ignore_patterns):
+        # Do nothing for collectstatic
+        return []
