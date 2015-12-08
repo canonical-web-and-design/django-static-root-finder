@@ -29,3 +29,8 @@ Usage
 
 The URL ``http://example.com/static/css/global.css`` should
 successfully link to ``./static/css/global.css``.
+
+Production
+---
+
+By default, when `DEBUG = False` as in production use, static files aren't served with Django at all. To change this behaviour, enable a WSGI static serving module like [dj-static](https://github.com/kennethreitz/dj-static).
