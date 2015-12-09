@@ -11,7 +11,9 @@ class StaticRootFinder(BaseFinder):
     """
 
     def find(self, file_path, all=False):
-        base_dir = getattr(settings, 'BASE_DIR', '')
+        if all:
+            raise NotImplementedError("'all' not implemented")
+
         static_root = getattr(settings, 'STATIC_ROOT', '')
 
         if not static_root:
@@ -20,10 +22,7 @@ class StaticRootFinder(BaseFinder):
                 ' to be set in settings.py.'
             )
 
-        static_root_file_path = path.join(base_dir, static_root, file_path)
-
-        if all:
-            raise NotImplementedError("'all' not implemented")
+        static_root_file_path = path.join(static_root, file_path)
 
         if path.isfile(static_root_file_path):
             return static_root_file_path
