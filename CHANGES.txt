@@ -1,2 +1,3 @@
 v0.1, 2014-06-05 -- Initial release.
 v0.1.1, 2014-10-20 -- Fix module name in README.rst. Better error reporting.
+v0.3.0, 2016-04-08 -- Improve file finding so we get proper 404s and the list method works.
