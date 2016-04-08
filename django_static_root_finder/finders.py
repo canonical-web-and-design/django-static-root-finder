@@ -27,7 +27,13 @@ class StaticRootFinder(BaseFinder):
 
         if path.isfile(static_root_file_path):
             return static_root_file_path
+        else:
+            return []
 
     def list(self, ignore_patterns):
-        # Do nothing for collectstatic
-        return []
+        static_root = getattr(settings, 'STATIC_ROOT', '')
+        storage = FileSystemStorage(location=static_root)
+
+        for path in utils.get_files(storage, ignore_patterns):
+            yield path, storage
+
