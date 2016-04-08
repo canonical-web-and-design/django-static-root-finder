@@ -31,9 +31,6 @@ class StaticRootFinder(BaseFinder):
             return []
 
     def list(self, ignore_patterns):
-        static_root = getattr(settings, 'STATIC_ROOT', '')
-        storage = FileSystemStorage(location=static_root)
-
-        for path in utils.get_files(storage, ignore_patterns):
-            yield path, storage
+        # List isn't implemented - we can't collect static
+        return []
 
