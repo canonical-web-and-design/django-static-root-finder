@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-static-root-finder',
-    version='0.1.1',
+    version='0.3.1',
     author='Robin',
     author_email='robin.winslow@canonical.com',
     url='https://github.com/ubuntudesign/django-static-root-finder',
